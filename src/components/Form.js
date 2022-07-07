@@ -16,7 +16,7 @@ function Form() {
     }
 
     const deleteTodo = id => {
-        const newTodos = todos.filter(item => item.id != id);
+        const newTodos = todos.filter(item => item.id !== id);
         setTodos(newTodos);
     }
     return (
@@ -28,7 +28,7 @@ function Form() {
                 <input type="text" name="todo" className="form-control" value={todo} onInput={e => setTodo(e.target.value)} />
                 {todo !== '' && <button className="btn btn-success mt-3">Ajouter</button>}
             </form>
-            <h3 className="text-weight-bold mt-2">Listes des tâche à faire</h3>
+            <h3 className="text-weight-bold mt-2">Listes des tâche à faire :</h3>
             <ul className="list-group">
                 {todos.map(item => {
                     return (
